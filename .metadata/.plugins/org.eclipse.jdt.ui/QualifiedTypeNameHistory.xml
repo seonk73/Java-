@@ -20,4 +20,11 @@
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="org.omg.CORBA.portable.InputStream"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="javax.swing.text.TabStop"/>
+<fullyQualifiedTypeName name="kr.hs.emirim.Top2"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="kr.hs.emirim.Top3"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="kr.hs.emirim.Summing"/>
+<fullyQualifiedTypeName name="kr.hs.emirim.MultiThreadExam"/>
 </qualifiedTypeNameHistroy>
