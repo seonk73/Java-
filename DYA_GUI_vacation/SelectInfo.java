@@ -4,7 +4,7 @@
 // 3-1. 출석이 아닌 경우 RadioButton으로 선택하기 (질병, 미인정, 기타, 인정)
 // 완료 Button 만들기 (완료누르면, 새 창에서 결과 보여줌 -> ResultInfo에서)
 
-package kr.hs.emirim;
+
 
 import java.awt.Dimension;
 import java.awt.Font;

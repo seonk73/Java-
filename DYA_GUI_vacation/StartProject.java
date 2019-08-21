@@ -1,7 +1,7 @@
 // 1. 동작, 버튼 누르면 SelectInfo로 !
 // 2. image 위 text ! (DYA 프로그램은 미림여자정보과학고등학교 학생들만 이용 가능합니다.) 문구 맨 밑 오른쪽에 띄우기 
 
-package kr.hs.emirim;
+
 
 import java.awt.*;
 import javax.swing.*;

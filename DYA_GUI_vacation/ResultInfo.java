@@ -1,4 +1,4 @@
-package kr.hs.emirim;
+
 
 import java.awt.Dimension;
 import java.awt.Image;
