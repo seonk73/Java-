@@ -1,4 +1,4 @@
-
+aaaaazz
 public class p153_ThrowExam {
 	public static void main(String[] args) {
 		p153_ThrowExam ts = new p153_ThrowExam();
