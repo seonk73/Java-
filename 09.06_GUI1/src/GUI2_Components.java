@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class GUI2_Components {
     public static void main(String[] args) {
@@ -21,6 +23,14 @@ public class GUI2_Components {
         JComboBox<String> cbox0 = new JComboBox<>(family);
         cbox0.addItem("에");
         cbox0.addItem("오");
+
+        // 실제 버튼이 실행되게 하는 코드
+        bt0.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                bt0.setText("Clicked");
+            }
+        });
 
         frame.add(panel);
         panel.add(lb0);
