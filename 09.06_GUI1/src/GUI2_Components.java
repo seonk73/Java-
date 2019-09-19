@@ -24,6 +24,8 @@ public class GUI2_Components {
         cbox0.addItem("에");
         cbox0.addItem("오");
 
+        JLabel lbResult = new JLabel("Result");
+
         // 실제 버튼이 실행되게 하는 코드
         bt0.addActionListener(new ActionListener() {
             @Override
@@ -32,7 +34,6 @@ public class GUI2_Components {
             }
         });
 
-        frame.add(panel);
         panel.add(lb0);
         panel.add(bt0);
         panel.add(cb0);
@@ -42,6 +43,9 @@ public class GUI2_Components {
         panel.add(tf0);
         panel.add(ta0);
         panel.add(cbox0);
+        panel.add(lbResult);
+
+        frame.add(panel);
 
         frame.setPreferredSize(new Dimension(600, 400));
         frame.pack();
