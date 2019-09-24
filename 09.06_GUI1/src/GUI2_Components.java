@@ -30,7 +30,18 @@ public class GUI2_Components {
         bt0.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                bt0.setText("Clicked");
+                String result = "";
+                result += lb0.getText();
+                result += bt0.getText();
+                result += cb0.isSelected(); //boolean, 참과 거짓으로 확인
+                result += cb1.isSelected();
+                result += rb0.isSelected();
+                result += rb1.isSelected();
+                result += tf0.getText();
+                result += ta0.getText();
+                result += cbox0.getSelectedIndex();
+                result += cbox0.getSelectedItem();
+                lbResult.setText(result);
             }
         });
 
