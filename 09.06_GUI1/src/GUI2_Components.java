@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
 public class GUI2_Components {
     public static void main(String[] args) {
@@ -26,6 +25,26 @@ public class GUI2_Components {
 
         JLabel lbResult = new JLabel("Result");
 
+        cb1.setSelected(true);
+        rb0.setSelected(true); // 초기 값 세팅
+        tf0.setText("전화번호를 입력하세요.");
+
+        // TextField에 "전화번호를 입력하세요"가 떠있는데 클릭하면 사라지게 하기
+        tf0.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) { // 관심 받기
+                if (tf0.getText().equals("전화번호를 입력하세요.")) {
+                    tf0.setText("");
+                }
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) { // 관심 잃기
+                if (tf0.getText().equals("")) { // 값을 입력하지 않고, 다른 것을 선택하면 문구 띄우기, 이미 값이 써있으면 냅두기
+                    tf0.setText("전화번호를 입력하세요.");
+                }
+            }
+        });
         // 실제 버튼이 실행되게 하는 코드
         bt0.addActionListener(new ActionListener() {
             @Override
@@ -44,6 +63,28 @@ public class GUI2_Components {
                 lbResult.setText(result);
             }
         });
+
+        ItemListener il = new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                if (e.getSource() == cb0) {
+                    System.out.println("JCheckBox0 : " + cb0.isSelected());
+                } else if (e.getSource() == cb1) {
+                    System.out.println("JCheckBox1 : " + cb1.isSelected());
+                } else if (e.getSource() == rb0) {
+                    System.out.println("미성년자 : " + rb0.isSelected());
+                } else if (e.getSource() == rb1) {
+                    System.out.println("성인 : " + rb1.isSelected());
+                } else if (e.getSource() == cbox0) {
+                    System.out.println(cbox0.getSelectedItem());
+                }
+            }
+        }; // 세미콜론 빼먹지 않기
+        cb0.addItemListener(il);
+        cb1.addItemListener(il);
+        rb0.addItemListener(il);
+        rb1.addItemListener(il);
+        cbox0.addItemListener(il);
 
         panel.add(lb0);
         panel.add(bt0);
